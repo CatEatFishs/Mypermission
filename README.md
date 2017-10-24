@@ -10,6 +10,7 @@
                 .requestPermissions(new String[]{Manifest.permission.CALL_PHONE})
                 .request();
     }
+
 2.
   //权限回调
   @Override
@@ -17,6 +18,7 @@
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         PermissionHelp.requestPermissionsResult(this,requestCode,permissions);
     }
+
 3.
    //注解成功执行的方法
    @PermissionSucceed(requestCode = CALL_PHONE_REQUESTCODE)
